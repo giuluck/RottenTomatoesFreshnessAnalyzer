@@ -13123,7 +13123,7 @@ div#notebook {
 <p>Studenti:</p>
 <ul>
 <li>Luca Giuliani, 0000792513, luca.giuliani10@studio.unibo.it</li>
-<li>Filippo Pilutti, ..., filippo.pilutti@studio.unibo.it</li>
+<li>Filippo Pilutti, 0000793420, filippo.pilutti@studio.unibo.it</li>
 </ul>
 
 </div>
@@ -13189,6 +13189,7 @@ Per il training del sistema si è utilizzato un dataset di recensioni reperito d
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nel caso il dataset non fosse presente, è possibile scaricarlo direttamente da kaggle mettendo le proprie credenziali e facendo uso del modulo 'kaggle' che contiene delle API per il download automatico dei dati.
 Il modulo può essere installato con il comando: <code>pip install kaggle --upgrade</code></p>
+<p><em>Il download da github è stato inserito successivamente per permettere l'esecuzione diretta da Colab senza bisogno di scaricare le API di Kaggle e di autenticarsi</em></p>
 
 </div>
 </div>
@@ -13200,9 +13201,13 @@ Il modulo può essere installato con il comando: <code>pip install kaggle --upgr
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;reviews.tsv&#39;</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">kaggle</span>
-    <span class="n">kaggle</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">authenticate</span><span class="p">()</span>
-    <span class="n">kaggle</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">dataset_download_files</span><span class="p">(</span><span class="s1">&#39;rpnuser8182/rotten-tomatoes&#39;</span><span class="p">,</span> <span class="n">unzip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># import kaggle</span>
+    <span class="c1"># kaggle.api.authenticate()</span>
+    <span class="c1"># kaggle.api.dataset_download_files(&#39;rpnuser8182/rotten-tomatoes&#39;, unzip=True)</span>
+    
+    <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="k">import</span> <span class="n">urlretrieve</span>
+    <span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/giuluck/RottenTomatoesFreshnessAnalyzer/master/src/reviews.tsv&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;reviews.tsv&#39;</span><span class="p">)</span>
 <span class="n">original_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;reviews.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;unicode_escape&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13775,7 +13780,7 @@ Name: fresh, dtype: float64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x209fbc9b080&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x22a61b9ccf8&gt;</pre>
 </div>
 
 </div>
@@ -13850,8 +13855,8 @@ Name: fresh, dtype: float64</pre>
 <pre>Parental Content Review                 24
 full review at Movies for the Masses    15
 full review in Greek                     9
-Click to read review                     3
 click to read the full review            3
+Click to read review                     3
 Name: review, dtype: int64</pre>
 </div>
 
@@ -14282,7 +14287,7 @@ Name: review, dtype: int64</pre>
     </tr>
     <tr>
       <th>top</th>
-      <td>Thunderball, the biggest, most lavish, and lon...</td>
+      <td>Feels like we're watching Mr. Rogers run a cou...</td>
       <td>True</td>
     </tr>
     <tr>
