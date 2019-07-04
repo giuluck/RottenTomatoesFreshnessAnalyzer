@@ -1,4 +1,4 @@
-# Rotten Tomatoes Freshness Analyzer
+﻿# Rotten Tomatoes Freshness Analyzer
 
 **Corso di Programmazione di Applicazioni Data Intensive**
 
@@ -8,4 +8,4 @@ DISI - Università di Bologna, Cesena
 
 Studenti:
 - Luca Giuliani, 0000792513, luca.giuliani10@studio.unibo.it
-- Filippo Pilutti, ..., filippo.pilutti@studio.unibo.it
+- Filippo Pilutti, 0000793420, filippo.pilutti@studio.unibo.it
