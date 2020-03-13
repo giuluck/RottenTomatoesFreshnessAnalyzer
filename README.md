@@ -6,11 +6,7 @@ The application is aimed at classifying into fresh (positive) and rotten (negati
 
 Bachelor Degree in Computer Science and Engineering 
 
-DISI - Università di Bologna, Cesena
-
-Students:
-- Luca Giuliani, luca.giuliani10@studio.unibo.it
-- Filippo Pilutti, filippo.pilutti@studio.unibo.it
+DISI - University og Bologna, Cesena Campus
 
 **Colab Execution**
 
