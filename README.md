@@ -1,16 +1,17 @@
-﻿# Rotten Tomatoes Freshness Analyzer
+# Rotten Tomatoes Freshness Analyzer
+ 
+The application is aimed at classifying into fresh (positive) and rotten (negative) reviews taken from the review-aggregation website www.rottentomatoes.com using Natural Language Processing techniques.  
 
-**Corso di Programmazione di Applicazioni Data Intensive**
+**Data Intensive Project Work**
 
-Laurea in Ingegneria e Scienze Informatiche  
+Bachelor Degree in Computer Science and Engineering 
 
 DISI - Università di Bologna, Cesena
 
-Studenti:
-- Luca Giuliani, 0000792513, luca.giuliani10@studio.unibo.it
-- Filippo Pilutti, 0000793420, filippo.pilutti@studio.unibo.it
+Students:
+- Luca Giuliani, luca.giuliani10@studio.unibo.it
+- Filippo Pilutti, filippo.pilutti@studio.unibo.it
 
-
-**Link per l'Esecuzione in Colab**
+**Colab Execution**
 
 https://colab.research.google.com/github/giuluck/RottenTomatoesFreshnessAnalyzer/blob/master/src/RTFA.ipynb
